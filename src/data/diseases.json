@@ -1,0 +1,403 @@
+{
+    "tosse": [
+        {
+            "id": 1,
+            "signal": "Qualquer sinal geral de perigo.",
+            "classify": "Pneumonia grave ou doença muito grave",
+            "type": "danger"
+        },
+        {
+            "id": 2,
+            "signal": "Tiragem subscostal.",
+            "classify": "Pneumonia grave ou doença muito grave",
+            "type": "danger"
+        },
+        {
+            "id": 3,
+            "signal": "Estridor em repouso.",
+            "classify": "Pneumonia grave ou doença muito grave",
+            "type": "danger"
+        },
+        {
+            "id": 4,
+            "signal": "Respiração rápida.",
+            "classify": "Pneumonia",
+            "type": "moderate"
+        },
+        {
+            "id": 5,
+            "signal": "Nenhum dos sinais acima",
+            "classify": "Não é pneumonia",
+            "type": "none"
+        }
+    ],
+    "sibilancia": [
+        {
+            "id": 1,
+            "signal": "Qualquer sinal geral de perigo",
+            "classify": "Sibilância grave ou doença muito grave",
+            "type": "danger"
+        },
+        {
+            "id": 2,
+            "signal": "Letargia ou sempre agitada.",
+            "classify": "Sibilância grave ou doença muito grave",
+            "type": "danger"
+        },
+        {
+            "id": 3,
+            "signal": "Estridor em repouso.",
+            "classify": "Sibilância grave ou doença muito grave",
+            "type": "danger"
+        },
+        {
+            "id": 4,
+            "signal": "Fala frases incompletas (palavras isoladas); no lactente: choro curto ou não consegue chorar",
+            "classify": "Sibilância grave ou doença muito grave",
+            "type": "danger"
+        },
+        {
+            "id": 5,
+            "signal": "Tiragem universal.",
+            "classify": "Sibilância grave ou doença muito grave",
+            "type": "danger"
+        },
+        {
+            "id": 6,
+            "signal": "Sat. O2 ≤ 90% * em ar ambiente.",
+            "classify": "Sibilância grave ou doença muito grave",
+            "type": "danger"
+        },
+        {
+            "id": 7,
+            "signal": "Nível de consciência normal com períodos de agitação",
+            "classify": "Sibilância Moderada",
+            "type": "moderate"
+        },
+        {
+            "id": 8,
+            "signal": "Fala entrecortada ou choro entrecortado.",
+            "classify": "Sibilância Moderada",
+            "type": "moderate"
+        },
+        {
+            "id": 9,
+            "signal": "Tiragem subcostal.",
+            "classify": "Sibilância Moderada",
+            "type": "moderate"
+        },
+        {
+            "id": 10,
+            "signal": "Respiração rápida.",
+            "classify": "Sibilância Moderada",
+            "type": "moderate"
+        },
+        {
+            "id": 11,
+            "signal": "Sat. O2 de 91 a 95%* em ar ambiente",
+            "classify": "Sibilância Moderada",
+            "type": "moderate"
+        },
+        {
+            "id": 12,
+            "signal": "Não há sinais suficientes para classificar como sibilância grave ou moderada.",
+            "classify": "Sibilância Leve",
+            "type": "none"
+        },
+        {
+            "id": 13,
+            "signal": "Sat. O2 ≥ 95%* em ar ambiente",
+            "classify": "Sibilância Leve",
+            "type": "none"
+        }
+    ],
+    "diarreia":
+        {
+            "hidratacao": [
+                {
+                    "id": 1,
+                    "signal": "Letárgica ou inconsciente.",
+                    "classify": "Desidratação grave",
+                    "type": "danger"
+                },
+                {
+                    "id": 2,
+                    "signal": "Olhos fundos.",
+                    "classify": "Desidratação grave",
+                    "type": "danger"
+                },
+                {
+                    "id": 3,
+                    "signal": "Não consegue beber ou bebe muito mal.",
+                    "classify": "Desidratação grave",
+                    "type": "danger"
+                },
+                {
+                    "id": 4,
+                    "signal": "Sinal da prega: a pele volta muito lentamente ao estado anterior",
+                    "classify": "Desidratação grave",
+                    "type": "danger"
+                },
+                {
+                    "id": 5,
+                    "signal": "Inquieta ou irritada",
+                    "classify": "Desidratação",
+                    "type": "moderate"
+                },
+                {
+                    "id": 6,
+                    "signal": "Olhos fundos",
+                    "classify": "Desidratação",
+                    "type": "moderate"
+                },
+                {
+                    "id": 7,
+                    "signal": "Bebe avidamente, com sede.",
+                    "classify": "Desidratação",
+                    "type": "moderate"
+                },
+                {
+                    "id": 8,
+                    "signal": "Sinal da prega: a pele volta lentamente ao estado anterior.",
+                    "classify": "Desidratação",
+                    "type": "moderate"
+                },
+                {
+                    "id": 9,
+                    "signal": "Não há sinais suficientes para classificar como DESIDRATAÇÃO ou DESIDRATAÇÃO GRAVE.",
+                    "classify": "Sem desidratação",
+                    "type": "none"
+                }
+            ],
+            "14dias": [
+                {
+                    "id": 1,
+                    "signal": "Com desidratação.",
+                    "classify": "Diarreia persistente grave",
+                    "type": "danger"
+                },
+                {
+                    "id": 2,
+                    "signal": "Sem desidratação",
+                    "classify": "Diarreia persistente",
+                    "type": "moderate"
+                }
+            ],
+            "sangue": [
+                {
+                    "id": 1,
+                    "signal": "Sangue nas fezes",
+                    "classify": "Disenteria",
+                    "type": "moderate"
+                }
+            ]
+        },
+    "febre": {
+        "com_malaria": [
+            {
+                "id": 1,
+                "signal": "Qualquer sinal geral de perigo.",
+                "classify": "Malária grave ou doença febril muito grave",
+                "type": "danger"
+            },
+            {
+                "id": 2,
+                "signal": "Rigidez de nuca.",
+                "classify": "Malária grave ou doença febril muito grave",
+                "type": "danger"
+            },
+            {
+                "id": 3,
+                "signal": "Petéquias.",
+                "classify": "Malária grave ou doença febril muito grave",
+                "type": "danger"
+            },
+            {
+                "id": 4,
+                "signal": "Abaulamento de fontanela.",
+                "classify": "Malária grave ou doença febril muito grave",
+                "type": "danger"
+            },
+            {
+                "id": 5,
+                "signal": "Nenhum sinal de malária grave ou doença febril muito grave e gota espessa ou teste rápido positivo.",
+                "classify": "Malária",
+                "type": "moderate"
+            },
+            {
+                "id": 6,
+                "signal": "Nenhum dos sinais acima e gota espessa ou teste rápido negativo",
+                "classify": "Doença febril",
+                "type": "none"
+            }
+        ],
+        "sem_malaria": [
+            {
+                "id": 1,
+                "signal": "Qualquer sinal geral de perigo.",
+                "classify": "Doença febril muito grave",
+                "type": "danger"
+            },
+            {
+                "id": 2,
+                "signal": "Rigidez de nuca.",
+                "classify": "Doença febril muito grave",
+                "type": "danger"
+            },
+            {
+                "id": 3,
+                "signal": "Petéquias.",
+                "classify": "Doença febril muito grave",
+                "type": "danger"
+            },
+            {
+                "id": 4,
+                "signal": "Abaulamento de fontanela.",
+                "classify": "Doença febril muito grave",
+                "type": "danger"
+            },
+            {
+                "id": 5,
+                "signal": "Nenhum sinal de doença febril muito grave.",
+                "classify": "Doença febril",
+                "type": "none"
+            }
+        ]
+    },
+    "problema_no_ouvido": [
+        {
+            "id": 1,
+            "signal": "Tumefação e/ou vermelhidão dolorosa ao toque atrás da orelha.",
+            "classify": "Mastoidite",
+            "type": "danger"
+        },
+        {
+            "id": 2,
+            "signal": "Secreção purulenta visível no ouvido há menos de 14 dias ou otoscopia alterada.",
+            "classify": "Infecção aguda do ouvido",
+            "type": "moderate"
+        },
+        {
+            "id": 3,
+            "signal": "Dor no ouvido",
+            "classify": "Possível infecção aguda do ouvido",
+            "type": "moderate"
+        },
+        {
+            "id": 4,
+            "signal": "Secreção purulenta visível no ouvido há 14 dias ou mais",
+            "classify": "Infecção crônica do ouvido",
+            "type": "moderate"
+        },
+        {
+            "id": 5,
+            "signal": "Não tem dor de ouvido e não foi notada alguma secreção purulenta no ouvido.",
+            "classify": "Não há infecção do ouvido",
+            "type": "none"
+        }
+    ],
+    "dor_de_garganta": [
+        {
+            "id": 1,
+            "signal": "Qualquer sinal geral de perigo.",
+            "classify": "Infecção grave de garganta",
+            "type": "danger"
+        },
+        {
+            "id": 2,
+            "signal": "Abaulamento de palato.",
+            "classify": "Infecção grave de garganta",
+            "type": "danger"
+        },
+        {
+            "id": 3,
+            "signal": "Amígdalas com a presença de membranas branco-acinzentadas.",
+            "classify": "Infecção grave de garganta",
+            "type": "danger"
+        },
+        {
+            "id": 4,
+            "signal": "Gânglios aumentados e dolorosos no pescoço.",
+            "classify": "Infecção moderada de garganta",
+            "type": "moderate"
+        },
+        {
+            "id": 5,
+            "signal": "Amígdalas hiperemiadas com pontos purulentos ou petéquias em palato.",
+            "classify": "Infecção moderada de garganta",
+            "type": "moderate"
+        },
+        {
+            "id": 6,
+            "signal": "Vesículas e ou hiperemia de garganta, associados a sinais de resfriado comum",
+            "classify": "Infecção leve de garganta",
+            "type": "none"
+        },
+        {
+            "id": 7,
+            "signal": "Não há nenhum dos sinais acima descritos.",
+            "classify": "Não há infecção de garganta",
+            "type": "none"
+        }
+    ],
+    "desnutricao": {
+        "nutricao": [
+            {
+                "id": 1,
+                "signal": "Emagrecimanto acentuado visível",
+                "classify": "Desnutrição grave",
+                "type": "danger"
+            },
+            {
+                "id": 2,
+                "signal": "Edema em ambos os pés.",
+                "classify": "Desnutrição grave",
+                "type": "danger"
+            },
+            {
+                "id": 3,
+                "signal": "Peso para a idade < -3 escores z.",
+                "classify": "Peso muito baixo",
+                "type": "moderate"
+            },
+            {
+                "id": 4,
+                "signal": "Peso para a idade < -2 e ≥ -3 escores z.",
+                "classify": "Peso baixo ou ganho de peso insuficiente",
+                "type": "moderate"
+            },
+            {
+                "id": 5,
+                "signal": "Tendência da curva peso/idade horizontal ou descendente",
+                "classify": "Peso baixo ou ganho de peso insuficiente",
+                "type": "moderate"
+            },
+            {
+                "id": 6,
+                "signal": "Peso para a idade > +2 escores z.",
+                "classify": "Peso elevado",
+                "type": "moderate"
+            },
+            {
+                "id": 7,
+                "signal": "Peso para a idade ≤ +2 e ≥ -2 escore z.",
+                "classify": "Peso adequado",
+                "type": "none"
+            }
+        ],
+        "palidez_palmar": [
+            {
+                "id": 1,
+                "signal": "Palidez palmar grave ou Hb abaixo de 5 g/dL.",
+                "classify": "Anemia grave",
+                "type": "danger"
+            },
+            {
+                "id": 2,
+                "signal": "• Palidez palmar leve ou Hb de 5 g/dL a 10,9 g/dL.",
+                "classify": "Anemia",
+                "type": "moderate"
+            }
+        ]
+    }
+}
