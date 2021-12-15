@@ -12,6 +12,7 @@ const data = [
     id: 2,
     disease: 'DIARREIA',
     screen: 'Diarreia',
+    params: 'hidratacao',
   },
   {
     id: 3,
@@ -45,7 +46,13 @@ const Disease: React.FC = () => {
           <View key={questionData.id} style={styles.buttonContainer}>
             <TouchableOpacity
               style={styles.disease}
-              onPress={() => navigation.navigate(questionData.screen as never)}>
+              onPress={() =>
+                navigation.navigate(
+                  questionData.screen as never,
+                  (questionData.params as never) &&
+                    ({cause: questionData.params} as never),
+                )
+              }>
               <Text style={styles.diseaseLabel}>{questionData.disease}</Text>
             </TouchableOpacity>
           </View>

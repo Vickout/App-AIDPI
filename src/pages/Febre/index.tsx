@@ -1,8 +1,9 @@
-import React, {Fragment, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation, useRoute, RouteProp} from '@react-navigation/native';
 
 import signals from '../../data/diseases.json';
+import Checkbox from '../../components/Checkbox';
 
 type RootStackParamList = {
   Febre: {region_has_malaria: string};
@@ -14,6 +15,7 @@ interface IList {
   id: number;
   signal: string;
   classify: string;
+  type: string;
 }
 
 const Febre: React.FC = () => {
@@ -34,22 +36,14 @@ const Febre: React.FC = () => {
       <Text style={styles.text}>Verifique se há sinais gerais de perigo</Text>
       <View style={styles.questionContainer}>
         {signal.map(data => (
-          <Fragment key={data.id}>
-            <Text style={styles.question}>{data.signal}</Text>
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity style={styles.answer}>
-                <Text>Sim</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.answer}>
-                <Text>Não</Text>
-              </TouchableOpacity>
-            </View>
-          </Fragment>
+          <Checkbox key={data.id} data={data} screen="Febre">
+            {data.signal}
+          </Checkbox>
         ))}
       </View>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Disease' as never)}>
+        onPress={() => navigation.navigate('Classification' as never)}>
         <Text style={styles.buttonLabel}>Classificar</Text>
       </TouchableOpacity>
     </View>

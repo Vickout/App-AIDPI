@@ -16,6 +16,8 @@ import Anemia from '../pages/Anemia';
 
 import ClassifyTosse from '../pages/Tosse/ClassifyTosse';
 import ClassifyFebre from '../pages/Febre/ClassifyFebre';
+import ClassifyDiarreia from '../pages/Diarreia/ClassifyDiarreia';
+import ClassifyDiarreiaTime from '../pages/Diarreia/ClassifyDiarreiaTime';
 import Classification from '../pages/Classification';
 
 const Stack = createNativeStackNavigator();
@@ -34,6 +36,11 @@ const Routes: React.FC = () => (
     <Stack.Screen name="Sibilancia" component={Sibilancia} />
     <Stack.Screen name="ClassifyFebre" component={ClassifyFebre} />
     <Stack.Screen name="Diarreia" component={Diarreia} />
+    <Stack.Screen name="ClassifyDiarreia" component={ClassifyDiarreia} />
+    <Stack.Screen
+      name="ClassifyDiarreiaTime"
+      component={ClassifyDiarreiaTime}
+    />
     <Stack.Screen name="Febre" component={Febre} />
     <Stack.Screen name="Ouvido" component={Ouvido} />
     <Stack.Screen name="Garganta" component={Garganta} />

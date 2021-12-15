@@ -1,7 +1,8 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import signals from '../../data/diseases.json';
+import Checkbox from '../../components/Checkbox';
 
 const Anemia: React.FC = () => {
   const navigation = useNavigation();
@@ -11,17 +12,9 @@ const Anemia: React.FC = () => {
       <Text style={styles.text}>Verifique se há sinais gerais de perigo</Text>
       <View style={styles.questionContainer}>
         {signals.desnutricao.palidez_palmar.map(data => (
-          <Fragment key={data.id}>
-            <Text style={styles.question}>{data.signal}</Text>
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity style={styles.answer}>
-                <Text>Sim</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.answer}>
-                <Text>Não</Text>
-              </TouchableOpacity>
-            </View>
-          </Fragment>
+          <Checkbox key={data.id} data={data}>
+            {data.signal}
+          </Checkbox>
         ))}
       </View>
       <TouchableOpacity

@@ -1,7 +1,8 @@
-import React, {Fragment} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import React from 'react';
+import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import signals from '../../data/diseases.json';
+import Checkbox from '../../components/Checkbox';
 
 const Garganta: React.FC = () => {
   const navigation = useNavigation();
@@ -10,25 +11,24 @@ const Garganta: React.FC = () => {
     <View style={styles.container}>
       <Text style={styles.text}>Verifique se há sinais gerais de perigo</Text>
       <View style={styles.questionContainer}>
-        {signals.dor_de_garganta.map(data => (
-          <Fragment key={data.id}>
-            <Text style={styles.question}>{data.signal}</Text>
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity style={styles.answer}>
-                <Text>Sim</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.answer}>
-                <Text>Não</Text>
-              </TouchableOpacity>
-            </View>
-          </Fragment>
-        ))}
+        <FlatList
+          data={signals.dor_de_garganta}
+          keyExtractor={item => String(item.id)}
+          numColumns={1}
+          ListFooterComponent={() => (
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate('Classification' as never)}>
+              <Text style={styles.buttonLabel}>Classificar</Text>
+            </TouchableOpacity>
+          )}
+          renderItem={({item}) => (
+            <Checkbox key={item.id} data={item} screen="Garganta">
+              {item.signal}
+            </Checkbox>
+          )}
+        />
       </View>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Disease' as never)}>
-        <Text style={styles.buttonLabel}>Classificar</Text>
-      </TouchableOpacity>
     </View>
   );
 };
@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   button: {
-    position: 'absolute',
-    bottom: 40,
+    marginBottom: 60,
+    alignSelf: 'center',
     backgroundColor: '#ff8903',
     width: 250,
     height: 50,

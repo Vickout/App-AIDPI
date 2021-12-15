@@ -1,32 +1,57 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import Checkbox from '../../components/Checkbox';
 
 const data = [
   {
     id: 1,
-    question: 'A criança consegue beber ou mamar no peito?',
+    signal: 'A criança consegue beber ou mamar no peito?',
+    classify: `A criança apresenta sinal geral de perigo e necessita ser urgentemente
+assistida; completar imediatamente a avaliação, administrar o tratamento indicado prévio à
+referência e referir urgentemente ao hospital.`,
+    type: 'danger',
   },
   {
     id: 2,
-    question: 'A criança vomita tudo que ingere?',
+    signal: 'A criança vomita tudo que ingere?',
+    classify: `A criança apresenta sinal geral de perigo e necessita ser urgentemente
+assistida; completar imediatamente a avaliação, administrar o tratamento indicado prévio à
+referência e referir urgentemente ao hospital.`,
+    type: 'danger',
   },
   {
     id: 3,
-    question:
+    signal:
       'A criança apresentou convulsões ou movimentos anormais há menos de 72h?',
+    classify: `A criança apresenta sinal geral de perigo e necessita ser urgentemente
+assistida; completar imediatamente a avaliação, administrar o tratamento indicado prévio à
+referência e referir urgentemente ao hospital.`,
+    type: 'danger',
   },
   {
     id: 4,
-    question: 'A criança está letárgica ou inconsciente?',
+    signal: 'A criança está letárgica ou inconsciente?',
+    classify: `A criança apresenta sinal geral de perigo e necessita ser urgentemente
+assistida; completar imediatamente a avaliação, administrar o tratamento indicado prévio à
+referência e referir urgentemente ao hospital.`,
+    type: 'danger',
   },
   {
     id: 5,
-    question: 'A criança apresenta tempo de enchimento capilar >2seg?',
+    signal: 'A criança apresenta tempo de enchimento capilar >2seg?',
+    classify: `A criança apresenta sinal geral de perigo e necessita ser urgentemente
+assistida; completar imediatamente a avaliação, administrar o tratamento indicado prévio à
+referência e referir urgentemente ao hospital.`,
+    type: 'danger',
   },
   {
     id: 6,
-    question: 'A criança apresenta batimento de asa do nariz e/ou gemência?',
+    signal: 'A criança apresenta batimento de asa do nariz e/ou gemência?',
+    classify: `A criança apresenta sinal geral de perigo e necessita ser urgentemente
+assistida; completar imediatamente a avaliação, administrar o tratamento indicado prévio à
+referência e referir urgentemente ao hospital.`,
+    type: 'danger',
   },
 ];
 
@@ -38,22 +63,17 @@ const FirstAssessment: React.FC = () => {
       <Text style={styles.text}>Verifique se há sinais gerais de perigo</Text>
       <View style={styles.questionContainer}>
         {data.map(questionData => (
-          <Fragment key={questionData.id}>
-            <Text style={styles.question}>{questionData.question}</Text>
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity style={styles.answer}>
-                <Text>Sim</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.answer}>
-                <Text>Não</Text>
-              </TouchableOpacity>
-            </View>
-          </Fragment>
+          <Checkbox
+            key={questionData.id}
+            data={questionData}
+            screen="FirstAssessment">
+            {questionData.signal}
+          </Checkbox>
         ))}
       </View>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Disease' as never)}>
+        onPress={() => navigation.navigate('Classification' as never)}>
         <Text style={styles.buttonLabel}>Classificar</Text>
       </TouchableOpacity>
     </View>

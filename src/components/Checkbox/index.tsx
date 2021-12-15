@@ -1,35 +1,55 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text} from 'react-native';
-import {RectButton, RectButtonProperties} from 'react-native-gesture-handler';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+
 import Icon from 'react-native-vector-icons/Feather';
 
-interface CheckBoxProps extends RectButtonProperties {
-  children: string;
+import {useClassify} from '../../hooks/classify';
+
+interface IDisease {
+  id: number;
+  signal: string;
+  classify: string;
+  type: string;
 }
 
-const Checkbox: React.FC<CheckBoxProps> = ({children, ...rest}) => {
+interface CheckBoxProps {
+  children: string;
+  data: IDisease;
+  screen: string;
+}
+
+const Checkbox: React.FC<CheckBoxProps> = ({
+  children,
+  data,
+  screen,
+  ...rest
+}) => {
   const [selectedIcon, setSelectedIcon] = useState(false);
-  console.log(selectedIcon);
+  const {addDisease} = useClassify();
+
   return (
-    <RectButton
+    <TouchableOpacity
       style={styles.container}
-      //onPress={() => console.log('apertou')}
+      onPress={() => {
+        setSelectedIcon(!selectedIcon);
+        addDisease({...data, screen});
+      }}
       {...rest}>
       <Text style={styles.question}>{children}</Text>
       {selectedIcon ? (
         <Icon name="check" size={20} color="#129400" />
       ) : (
-        <Icon name="circle" size={20} color="#000" />
+        <Icon name="circle" size={20} color="#6b6767" />
       )}
-    </RectButton>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
+    justifyContent: 'space-between',
     marginRight: 10,
     backgroundColor: '#fff',
     marginBottom: 20,
@@ -40,6 +60,7 @@ const styles = StyleSheet.create({
     color: '#6b6767',
     fontWeight: 'bold',
     fontSize: 16,
+    width: 250,
   },
 });
 

@@ -1,55 +1,66 @@
-import React, {Fragment, useEffect, useState} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
-import signals from '../../data/diseases.json';
+import React, {useEffect, useState} from 'react';
+import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {useNavigation, useRoute, RouteProp} from '@react-navigation/native';
 
-interface IDiarreia {
-  cause: string;
-}
+import signals from '../../data/diseases.json';
+import Checkbox from '../../components/Checkbox';
+
+type RootStackParamList = {
+  Diarreia: {cause: string};
+};
+
+type ProfileScreenRouteProp = RouteProp<RootStackParamList, 'Diarreia'>;
 
 interface IList {
   id: number;
   signal: string;
   classify: string;
+  type: string;
 }
 
-const Diarreia: React.FC<IDiarreia> = ({cause}) => {
+const Diarreia: React.FC = () => {
   const navigation = useNavigation();
   const [signal, setSignal] = useState<IList[]>([]);
+  const route = useRoute<ProfileScreenRouteProp>();
 
   useEffect(() => {
-    if (cause === 'hidratacao') {
+    if (route.params.cause === 'hidratacao') {
       setSignal(signals.diarreia.hidratacao);
-    } else if (cause === '14dias') {
+    } else if (route.params.cause === '14dias') {
       setSignal(signals.diarreia['14dias']);
-    } else if (cause === 'sangue') {
+    } else if (route.params.cause === 'sangue') {
       setSignal(signals.diarreia.sangue);
     }
-  }, [cause]);
+  }, [route.params.cause]);
 
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Verifique se há sinais gerais de perigo</Text>
       <View style={styles.questionContainer}>
-        {signal.map(data => {
-          <Fragment key={data.id}>
-            <Text style={styles.question}>{data.signal}</Text>
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity style={styles.answer}>
-                <Text>Sim</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.answer}>
-                <Text>Não</Text>
-              </TouchableOpacity>
-            </View>
-          </Fragment>;
-        })}
+        <FlatList
+          data={signal}
+          keyExtractor={item => String(item.id)}
+          numColumns={1}
+          ListFooterComponent={() => (
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate('Classification' as never)}>
+              <Text style={styles.buttonLabel}>Classificar</Text>
+            </TouchableOpacity>
+          )}
+          renderItem={({item}) => (
+            <Checkbox
+              key={item.id}
+              data={item}
+              screen={
+                route.params.cause.charAt(0).toUpperCase() +
+                route.params.cause.slice(1)
+              }>
+              {item.signal}
+            </Checkbox>
+          )}
+        />
       </View>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Disease' as never)}>
-        <Text style={styles.buttonLabel}>Classificar</Text>
-      </TouchableOpacity>
     </View>
   );
 };
@@ -91,8 +102,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   button: {
-    position: 'absolute',
-    bottom: 40,
+    marginBottom: 60,
+    alignSelf: 'center',
     backgroundColor: '#ff8903',
     width: 250,
     height: 50,
