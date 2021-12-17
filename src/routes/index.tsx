@@ -45,7 +45,7 @@ const Routes: React.FC = () => (
     <Stack.Screen
       name="Disease"
       component={Disease}
-      options={{title: 'AIDPI'}}
+      options={{title: 'AIDPI', headerBackVisible: false}}
     />
     <Stack.Screen name="Tosse" component={Tosse} options={{title: 'TOSSE'}} />
     <Stack.Screen

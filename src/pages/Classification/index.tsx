@@ -96,6 +96,7 @@ const Classification: React.FC = () => {
         {classify.classify}
       </Title>
       <Button
+        style={{elevation: 4}}
         onPress={() => {
           resetClassification();
           setClassify({} as IClassification);

@@ -4,7 +4,7 @@ import {lighten} from 'polished';
 export const Container = styled.TouchableOpacity`
   margin-top: 20px;
   margin-bottom: 60px;
-  background-color: #ff8903;
+  background-color: #e27af5;
   width: 250px;
   height: 50px;
   border-radius: 10px;
@@ -15,7 +15,7 @@ export const Container = styled.TouchableOpacity`
   ${props =>
     props.disabled &&
     css`
-      background-color: ${lighten(0.2, '#ff8903')};
+      background-color: ${lighten(0.15, '#e27af5')};
     `}
 `;
 export const ButtonText = styled.Text`

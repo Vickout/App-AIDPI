@@ -61,7 +61,7 @@ export const Title = styled.Text<TitleProps>`
 export const Button = styled.TouchableOpacity`
   position: absolute;
   bottom: 40px;
-  background-color: #ff8903;
+  background-color: #e27af5;
   width: 250px;
   height: 50px;
   border-radius: 10px;
