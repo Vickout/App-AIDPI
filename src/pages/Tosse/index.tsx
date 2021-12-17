@@ -14,7 +14,7 @@ const Tosse: React.FC = () => {
       <Text style={styles.text}>Verifique se há sinais gerais de perigo</Text>
       <View style={styles.questionContainer}>
         {signals.tosse.map(data => (
-          <Checkbox key={data.id} data={data}>
+          <Checkbox key={data.id} data={data} screen="Tosse">
             {data.signal}
           </Checkbox>
         ))}

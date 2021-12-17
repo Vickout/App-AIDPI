@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
 import {useNavigation, useRoute, RouteProp} from '@react-navigation/native';
 
 import signals from '../../data/diseases.json';
 import Checkbox from '../../components/Checkbox';
+import Button from '../../components/Button';
 
 type RootStackParamList = {
   Diarreia: {cause: string};
@@ -42,11 +43,10 @@ const Diarreia: React.FC = () => {
           keyExtractor={item => String(item.id)}
           numColumns={1}
           ListFooterComponent={() => (
-            <TouchableOpacity
-              style={styles.button}
+            <Button
               onPress={() => navigation.navigate('Classification' as never)}>
-              <Text style={styles.buttonLabel}>Classificar</Text>
-            </TouchableOpacity>
+              Classificar
+            </Button>
           )}
           renderItem={({item}) => (
             <Checkbox
@@ -81,40 +81,6 @@ const styles = StyleSheet.create({
   questionContainer: {
     width: '100%',
     marginTop: 20,
-  },
-  question: {
-    color: '#fff',
-    paddingBottom: 10,
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  answer: {
-    width: 150,
-    height: 30,
-    borderRadius: 15,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 20,
-  },
-  button: {
-    marginBottom: 60,
-    alignSelf: 'center',
-    backgroundColor: '#ff8903',
-    width: 250,
-    height: 50,
-    borderRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonLabel: {
-    color: '#fff',
-    fontSize: 20,
-    fontWeight: 'bold',
   },
 });
 

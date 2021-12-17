@@ -1,23 +1,21 @@
 import styled, {css} from 'styled-components/native';
+import {lighten} from 'polished';
 
-interface ContainerProps {
-  disabledInput?: boolean | null | undefined;
-}
-
-export const Container = styled.TouchableOpacity<ContainerProps>`
-  position: absolute;
-  bottom: 40px;
+export const Container = styled.TouchableOpacity`
+  margin-top: 20px;
+  margin-bottom: 60px;
   background-color: #ff8903;
   width: 250px;
   height: 50px;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+  align-self: center;
 
   ${props =>
-    props.disabledInput &&
+    props.disabled &&
     css`
-      background-color: #fcb25e;
+      background-color: ${lighten(0.2, '#ff8903')};
     `}
 `;
 export const ButtonText = styled.Text`

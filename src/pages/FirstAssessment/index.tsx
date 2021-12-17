@@ -1,12 +1,13 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import Checkbox from '../../components/Checkbox';
+import Button from '../../components/Button';
 
 const data = [
   {
     id: 1,
-    signal: 'A criança consegue beber ou mamar no peito?',
+    signal: 'A criança não consegue beber ou mamar no peito?',
     classify: `A criança apresenta sinal geral de perigo e necessita ser urgentemente
 assistida; completar imediatamente a avaliação, administrar o tratamento indicado prévio à
 referência e referir urgentemente ao hospital.`,
@@ -53,6 +54,12 @@ assistida; completar imediatamente a avaliação, administrar o tratamento indic
 referência e referir urgentemente ao hospital.`,
     type: 'danger',
   },
+  {
+    id: 7,
+    signal: 'Nenhum dos sinais acima',
+    classify: 'A criança não apresenta sinais de perigo',
+    type: 'none',
+  },
 ];
 
 const FirstAssessment: React.FC = () => {
@@ -62,20 +69,23 @@ const FirstAssessment: React.FC = () => {
     <View style={styles.container}>
       <Text style={styles.text}>Verifique se há sinais gerais de perigo</Text>
       <View style={styles.questionContainer}>
-        {data.map(questionData => (
-          <Checkbox
-            key={questionData.id}
-            data={questionData}
-            screen="FirstAssessment">
-            {questionData.signal}
-          </Checkbox>
-        ))}
+        <FlatList
+          data={data}
+          keyExtractor={item => String(item.id)}
+          numColumns={1}
+          ListFooterComponent={() => (
+            <Button
+              onPress={() => navigation.navigate('Classification' as never)}>
+              Classificar
+            </Button>
+          )}
+          renderItem={({item}) => (
+            <Checkbox key={item.id} data={item} screen="FirstAssessment">
+              {item.signal}
+            </Checkbox>
+          )}
+        />
       </View>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Classification' as never)}>
-        <Text style={styles.buttonLabel}>Classificar</Text>
-      </TouchableOpacity>
     </View>
   );
 };
@@ -94,41 +104,8 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
   questionContainer: {
+    width: '100%',
     marginTop: 20,
-  },
-  question: {
-    color: '#fff',
-    paddingBottom: 10,
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  answer: {
-    width: 150,
-    height: 30,
-    borderRadius: 15,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 20,
-  },
-  button: {
-    position: 'absolute',
-    bottom: 40,
-    backgroundColor: '#ff8903',
-    width: 250,
-    height: 50,
-    borderRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonLabel: {
-    color: '#fff',
-    fontSize: 20,
-    fontWeight: 'bold',
   },
 });
 

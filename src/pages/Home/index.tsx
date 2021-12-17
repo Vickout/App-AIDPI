@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         onPress={() => navigation.navigate('FirstAssessment' as never)}>
         <Icon name="list" size={50} color="#000" />
       </TouchableOpacity>
-      <Text style={styles.label}>Avaliar</Text>
+      <Text style={styles.label}>AVALIAR</Text>
     </View>
   );
 };
@@ -41,9 +41,17 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   label: {
-    color: '#fff',
+    color: '#000',
     fontWeight: 'bold',
     margin: 10,
   },

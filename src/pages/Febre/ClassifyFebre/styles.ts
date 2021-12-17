@@ -15,7 +15,7 @@ export const Title = styled.Text`
   font-weight: bold;
   text-align: center;
   line-height: 60px;
-  color: #fff;
+  color: #000;
 `;
 
 export const ButtonContainer = styled.View`

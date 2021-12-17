@@ -1,8 +1,9 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import signals from '../../data/diseases.json';
 import Checkbox from '../../components/Checkbox';
+import Button from '../../components/Button';
 
 const Ouvido: React.FC = () => {
   const navigation = useNavigation();
@@ -12,16 +13,14 @@ const Ouvido: React.FC = () => {
       <Text style={styles.text}>Verifique se há sinais gerais de perigo</Text>
       <View style={styles.questionContainer}>
         {signals.problema_no_ouvido.map(data => (
-          <Checkbox key={data.id} data={data}>
+          <Checkbox key={data.id} data={data} screen="Ouvido">
             {data.signal}
           </Checkbox>
         ))}
       </View>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Classification' as never)}>
-        <Text style={styles.buttonLabel}>Classificar</Text>
-      </TouchableOpacity>
+      <Button onPress={() => navigation.navigate('Classification' as never)}>
+        Classificar
+      </Button>
     </View>
   );
 };
@@ -42,40 +41,6 @@ const styles = StyleSheet.create({
   questionContainer: {
     width: '100%',
     marginTop: 20,
-  },
-  question: {
-    color: '#fff',
-    paddingBottom: 10,
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  answer: {
-    width: 150,
-    height: 30,
-    borderRadius: 15,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 20,
-  },
-  button: {
-    position: 'absolute',
-    bottom: 40,
-    backgroundColor: '#ff8903',
-    width: 250,
-    height: 50,
-    borderRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonLabel: {
-    color: '#fff',
-    fontSize: 20,
-    fontWeight: 'bold',
   },
 });
 

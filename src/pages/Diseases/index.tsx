@@ -26,7 +26,7 @@ const data = [
   },
   {
     id: 5,
-    disease: 'DOR NA GARGANTA',
+    disease: 'DOR DE GARGANTA',
     screen: 'Garganta',
   },
   {
@@ -43,19 +43,18 @@ const Disease: React.FC = () => {
       <Text style={styles.text}>O que a criança apresenta?</Text>
       <View style={styles.diseaseContainer}>
         {data.map(questionData => (
-          <View key={questionData.id} style={styles.buttonContainer}>
-            <TouchableOpacity
-              style={styles.disease}
-              onPress={() =>
-                navigation.navigate(
-                  questionData.screen as never,
-                  (questionData.params as never) &&
-                    ({cause: questionData.params} as never),
-                )
-              }>
-              <Text style={styles.diseaseLabel}>{questionData.disease}</Text>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity
+            key={questionData.id}
+            style={styles.disease}
+            onPress={() =>
+              navigation.navigate(
+                questionData.screen as never,
+                (questionData.params as never) &&
+                  ({cause: questionData.params} as never),
+              )
+            }>
+            <Text style={styles.diseaseLabel}>{questionData.disease}</Text>
+          </TouchableOpacity>
         ))}
       </View>
       <TouchableOpacity
@@ -81,13 +80,8 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
   diseaseContainer: {
-    marginTop: 20,
     paddingVertical: 30,
     justifyContent: 'center',
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
   },
   disease: {
     width: 300,
@@ -97,6 +91,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 30,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   diseaseLabel: {
     fontWeight: 'bold',

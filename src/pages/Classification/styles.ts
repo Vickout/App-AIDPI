@@ -4,6 +4,10 @@ interface ClassificationProps {
   typeOfClassification: string;
 }
 
+interface TitleProps extends ClassificationProps {
+  stringLength: number;
+}
+
 export const Container = styled.View<ClassificationProps>`
   flex: 1;
   align-items: center;
@@ -30,10 +34,17 @@ export const IconContainer = styled.View`
   top: 80px;
 `;
 
-export const Title = styled.Text<ClassificationProps>`
+export const Title = styled.Text<TitleProps>`
   font-size: 48px;
   font-weight: bold;
   line-height: 60px;
+
+  ${props =>
+    props.stringLength > 40 &&
+    css`
+      font-size: 24px;
+      line-height: 40px;
+    `}
 
   ${props =>
     props.typeOfClassification === 'danger' ||

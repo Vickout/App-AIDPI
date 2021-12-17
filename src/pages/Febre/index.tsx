@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {useNavigation, useRoute, RouteProp} from '@react-navigation/native';
 
 import signals from '../../data/diseases.json';
 import Checkbox from '../../components/Checkbox';
+import Button from '../../components/Button';
 
 type RootStackParamList = {
   Febre: {region_has_malaria: string};
@@ -41,11 +42,9 @@ const Febre: React.FC = () => {
           </Checkbox>
         ))}
       </View>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Classification' as never)}>
-        <Text style={styles.buttonLabel}>Classificar</Text>
-      </TouchableOpacity>
+      <Button onPress={() => navigation.navigate('Classification' as never)}>
+        Classificar
+      </Button>
     </View>
   );
 };
@@ -66,40 +65,6 @@ const styles = StyleSheet.create({
   questionContainer: {
     width: '100%',
     marginTop: 20,
-  },
-  question: {
-    color: '#fff',
-    paddingBottom: 10,
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  answer: {
-    width: 150,
-    height: 30,
-    borderRadius: 15,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 20,
-  },
-  button: {
-    position: 'absolute',
-    bottom: 40,
-    backgroundColor: '#ff8903',
-    width: 250,
-    height: 50,
-    borderRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonLabel: {
-    color: '#fff',
-    fontSize: 20,
-    fontWeight: 'bold',
   },
 });
 
