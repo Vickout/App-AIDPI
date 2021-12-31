@@ -9,7 +9,6 @@ interface DiseaseProps {
   treatments: Array<{
     id: number;
     treat: string;
-    result?: string;
   }>;
 }
 

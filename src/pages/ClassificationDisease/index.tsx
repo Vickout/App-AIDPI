@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {useClassify} from '../../hooks/classify';
 import Icon from 'react-native-vector-icons/Feather';
@@ -26,7 +26,6 @@ interface IClassification {
   treatments: Array<{
     id: number;
     treat: string;
-    result?: string;
   }>;
 }
 
@@ -135,20 +134,112 @@ const ClassificationDisease: React.FC = () => {
           </TreatmentHeader>
           {clicked && (
             <TreatmentItemContainer>
-              {classify.treatments.map(treatment => (
-                <TreatmentList key={treatment.id}>
-                  <Dot />
-                  <TreatmentItem>{treatment.treat}</TreatmentItem>
-                </TreatmentList>
-              ))}
+              {classify.treatments.map(treatment => {
+                if (
+                  classify.type === 'moderate' &&
+                  classify.screen === 'Sibilancia'
+                ) {
+                  if (treatment.id === 3) {
+                    return (
+                      <Fragment key={treatment.id}>
+                        <TreatmentItem condition>
+                          Se não melhorar:
+                        </TreatmentItem>
+                        <TreatmentList>
+                          <Dot />
+                          <TreatmentItem condition>
+                            {treatment.treat}
+                          </TreatmentItem>
+                        </TreatmentList>
+                      </Fragment>
+                    );
+                  } else if (treatment.id === 4) {
+                    return (
+                      <Fragment key={treatment.id}>
+                        <TreatmentItem condition>Se melhorar:</TreatmentItem>
+                        <TreatmentList>
+                          <Dot />
+                          <TreatmentItem>{treatment.treat}</TreatmentItem>
+                        </TreatmentList>
+                      </Fragment>
+                    );
+                  } else {
+                    return (
+                      <TreatmentList key={treatment.id}>
+                        <Dot />
+                        <TreatmentItem>{treatment.treat}</TreatmentItem>
+                      </TreatmentList>
+                    );
+                  }
+                }
+                if (
+                  classify.type === 'danger' &&
+                  classify.screen === 'Hidratacao'
+                ) {
+                  if (treatment.id === 1) {
+                    return (
+                      <Fragment key={treatment.id}>
+                        <TreatmentItem condition>
+                          Se a criança não se enquadrar em outra classificação
+                          grave:
+                        </TreatmentItem>
+                        <TreatmentList>
+                          <Dot />
+                          <TreatmentItem condition>
+                            {treatment.treat}
+                          </TreatmentItem>
+                        </TreatmentList>
+                      </Fragment>
+                    );
+                  } else if (treatment.id === 2) {
+                    return (
+                      <Fragment key={treatment.id}>
+                        <TreatmentItem condition>
+                          Se a criança também se enquadrar em outra
+                          classificação grave:
+                        </TreatmentItem>
+                        <TreatmentList>
+                          <Dot />
+                          <TreatmentItem condition>
+                            {treatment.treat}
+                          </TreatmentItem>
+                        </TreatmentList>
+                      </Fragment>
+                    );
+                  } else if (treatment.id === 3) {
+                    return (
+                      <TreatmentList key={treatment.id}>
+                        <Dot />
+                        <TreatmentItem condition>
+                          {treatment.treat}
+                        </TreatmentItem>
+                      </TreatmentList>
+                    );
+                  } else {
+                    return (
+                      <TreatmentList key={treatment.id}>
+                        <Dot />
+                        <TreatmentItem>{treatment.treat}</TreatmentItem>
+                      </TreatmentList>
+                    );
+                  }
+                } else {
+                  return (
+                    <TreatmentList key={treatment.id}>
+                      <Dot />
+                      <TreatmentItem>{treatment.treat}</TreatmentItem>
+                    </TreatmentList>
+                  );
+                }
+              })}
             </TreatmentItemContainer>
           )}
         </TreatmentContainer>
         <Button
           style={{elevation: 4}}
           onPress={() => {
-            resetClassification();
             setClassify({} as IClassification);
+            resetClassification();
             nextScreen();
           }}>
           <ButtonTitle>Prosseguir</ButtonTitle>

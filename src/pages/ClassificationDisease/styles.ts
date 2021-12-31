@@ -4,8 +4,8 @@ interface ClassificationProps {
   typeOfClassification: string;
 }
 
-interface ButtonProp {
-  hasOverFlowed: boolean;
+interface TreatmentItemProp {
+  condition?: boolean;
 }
 
 export const Container = styled.ScrollView<ClassificationProps>`
@@ -75,6 +75,7 @@ export const TreatmentItemContainer = styled.View`
 export const TreatmentList = styled.View`
   flex-direction: row;
   align-items: center;
+  padding-right: 20px;
 `;
 
 export const Dot = styled.View`
@@ -85,9 +86,15 @@ export const Dot = styled.View`
   margin-right: 10px;
 `;
 
-export const TreatmentItem = styled.Text`
+export const TreatmentItem = styled.Text<TreatmentItemProp>`
   margin: 10px 0;
   font-size: 16px;
+
+  ${props =>
+    props.condition &&
+    css`
+      font-weight: bold;
+    `}
 `;
 
 export const Button = styled.TouchableOpacity`
