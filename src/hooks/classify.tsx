@@ -6,6 +6,11 @@ interface DiseaseProps {
   classify: string;
   type: string;
   screen: string;
+  treatments: Array<{
+    id: number;
+    treat: string;
+    result?: string;
+  }>;
 }
 
 interface ClassifyContextData {

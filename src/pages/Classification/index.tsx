@@ -38,7 +38,6 @@ const Classification: React.FC = () => {
           type: data.type,
           screen: data.screen,
         };
-        console.log('DANGER');
         setClassify(classifyData);
         setText(classifyData.classify);
       } else if (data.type === 'moderate' && classifyData.type !== 'danger') {
@@ -47,7 +46,6 @@ const Classification: React.FC = () => {
           type: data.type,
           screen: data.screen,
         };
-        console.log('MODERATE');
         setClassify(classifyData);
         setText(classifyData.classify);
       } else if (
@@ -60,26 +58,11 @@ const Classification: React.FC = () => {
           type: data.type,
           screen: data.screen,
         };
-        console.log('NONE');
         setClassify(classifyData);
         setText(classifyData.classify);
       }
     });
   }, [yesDisease]);
-
-  const nextScreen = () => {
-    if (classify.screen === 'Sibilancia') {
-      navigation.navigate('Tosse' as never);
-    } else if (classify.screen === 'Hidratacao') {
-      navigation.navigate('ClassifyDiarreiaTime' as never);
-    } else if (classify.screen === '14dias') {
-      navigation.navigate('ClassifyDiarreia' as never);
-    } else if (classify.screen === 'Desnutricao') {
-      navigation.navigate('Anemia' as never);
-    } else {
-      navigation.navigate('Disease' as never);
-    }
-  };
 
   return (
     <Container typeOfClassification={classify.type}>
@@ -100,7 +83,7 @@ const Classification: React.FC = () => {
         onPress={() => {
           resetClassification();
           setClassify({} as IClassification);
-          nextScreen();
+          navigation.navigate('Disease' as never);
         }}>
         <ButtonTitle>Prosseguir</ButtonTitle>
       </Button>

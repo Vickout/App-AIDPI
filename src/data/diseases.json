@@ -4,31 +4,121 @@
             "id": 1,
             "signal": "Qualquer sinal geral de perigo.",
             "classify": "Pneumonia grave ou doença muito grave",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Dar a primeira dose de um antibiótico recomendado."
+                },
+                {
+                    "id": 2,
+                    "treat": "Tratar a criança para evitar hipoglicemia."
+                },
+                {
+                    "id": 3,
+                    "treat": "Referir urgentemente ao hospital."
+                },
+                {
+                    "id": 4,
+                    "treat": "Oxigênio, se disponível."
+                }
+            ]
         },
         {
             "id": 2,
             "signal": "Tiragem subscostal.",
             "classify": "Pneumonia grave ou doença muito grave",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Dar a primeira dose de um antibiótico recomendado."
+                },
+                {
+                    "id": 2,
+                    "treat": "Tratar a criança para evitar hipoglicemia."
+                },
+                {
+                    "id": 3,
+                    "treat": "Referir urgentemente ao hospital."
+                },
+                {
+                    "id": 4,
+                    "treat": "Oxigênio, se disponível."
+                }
+            ]
         },
         {
             "id": 3,
             "signal": "Estridor em repouso.",
             "classify": "Pneumonia grave ou doença muito grave",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Dar a primeira dose de um antibiótico recomendado."
+                },
+                {
+                    "id": 2,
+                    "treat": "Tratar a criança para evitar hipoglicemia."
+                },
+                {
+                    "id": 3,
+                    "treat": "Referir urgentemente ao hospital."
+                },
+                {
+                    "id": 4,
+                    "treat": "Oxigênio, se disponível."
+                }
+            ]
         },
         {
             "id": 4,
             "signal": "Respiração rápida.",
             "classify": "Pneumonia",
-            "type": "moderate"
+            "type": "moderate",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Dar um antibiótico recomendado duratne sete dias."
+                },
+                {
+                    "id": 2,
+                    "treat": "Aliviar a tosse com medidas caseiras."
+                },
+                {
+                    "id": 3,
+                    "treat": "Informar a mãe sobre quando retornar imediatamente."
+                },
+                {
+                    "id": 4,
+                    "treat": "Marcar o retorno em dois dias."
+                }
+            ]
         },
         {
             "id": 5,
             "signal": "Nenhum dos sinais acima",
             "classify": "Não é pneumonia",
-            "type": "none"
+            "type": "none",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Aliviar a tosse com medidas caseiras."
+                },
+                {
+                    "id": 2,
+                    "treat": "Informar a mãe sobre quando retornar imediatamente."
+                },
+                {
+                    "id": 3,
+                    "treat": "Seguimento em cinco dias, caso não melhore."
+                },
+                {
+                    "id": 4,
+                    "treat": "Se tosse há mais de 14 dias, realizar investigação."
+                }
+            ]
         }
     ],
     "sibilancia": [
@@ -36,79 +126,422 @@
             "id": 1,
             "signal": "Qualquer sinal geral de perigo",
             "classify": "Sibilância grave ou doença muito grave",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Oxigênio, se disponível."
+                },
+                {
+                    "id": 2,
+                    "treat": "Beta-2 agonista por via inalatória."
+                },
+                {
+                    "id": 3,
+                    "treat": "Primeira dose do corticoide."
+                },
+                {
+                    "id": 4,
+                    "treat": "Primeira dose do antibiótico."
+                },
+                {
+                    "id": 5,
+                    "treat": "Referir urgentemente ao hospital."
+                }
+            ]
         },
         {
             "id": 2,
             "signal": "Letargia ou sempre agitada.",
             "classify": "Sibilância grave ou doença muito grave",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Oxigênio, se disponível."
+                },
+                {
+                    "id": 2,
+                    "treat": "Beta-2 agonista por via inalatória."
+                },
+                {
+                    "id": 3,
+                    "treat": "Primeira dose do corticoide."
+                },
+                {
+                    "id": 4,
+                    "treat": "Primeira dose do antibiótico."
+                },
+                {
+                    "id": 5,
+                    "treat": "Referir urgentemente ao hospital."
+                }
+            ]
         },
         {
             "id": 3,
             "signal": "Estridor em repouso.",
             "classify": "Sibilância grave ou doença muito grave",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Oxigênio, se disponível."
+                },
+                {
+                    "id": 2,
+                    "treat": "Beta-2 agonista por via inalatória."
+                },
+                {
+                    "id": 3,
+                    "treat": "Primeira dose do corticoide."
+                },
+                {
+                    "id": 4,
+                    "treat": "Primeira dose do antibiótico."
+                },
+                {
+                    "id": 5,
+                    "treat": "Referir urgentemente ao hospital."
+                }
+            ]
         },
         {
             "id": 4,
             "signal": "Fala frases incompletas (palavras isoladas); no lactente: choro curto ou não consegue chorar",
             "classify": "Sibilância grave ou doença muito grave",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Oxigênio, se disponível."
+                },
+                {
+                    "id": 2,
+                    "treat": "Beta-2 agonista por via inalatória."
+                },
+                {
+                    "id": 3,
+                    "treat": "Primeira dose do corticoide."
+                },
+                {
+                    "id": 4,
+                    "treat": "Primeira dose do antibiótico."
+                },
+                {
+                    "id": 5,
+                    "treat": "Referir urgentemente ao hospital."
+                }
+            ]
         },
         {
             "id": 5,
             "signal": "Tiragem universal.",
             "classify": "Sibilância grave ou doença muito grave",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Oxigênio, se disponível."
+                },
+                {
+                    "id": 2,
+                    "treat": "Beta-2 agonista por via inalatória."
+                },
+                {
+                    "id": 3,
+                    "treat": "Primeira dose do corticoide."
+                },
+                {
+                    "id": 4,
+                    "treat": "Primeira dose do antibiótico."
+                },
+                {
+                    "id": 5,
+                    "treat": "Referir urgentemente ao hospital."
+                }
+            ]
         },
         {
             "id": 6,
             "signal": "Sat. O2 ≤ 90% * em ar ambiente.",
             "classify": "Sibilância grave ou doença muito grave",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Oxigênio, se disponível."
+                },
+                {
+                    "id": 2,
+                    "treat": "Beta-2 agonista por via inalatória."
+                },
+                {
+                    "id": 3,
+                    "treat": "Primeira dose do corticoide."
+                },
+                {
+                    "id": 4,
+                    "treat": "Primeira dose do antibiótico."
+                },
+                {
+                    "id": 5,
+                    "treat": "Referir urgentemente ao hospital."
+                }
+            ]
         },
         {
             "id": 7,
             "signal": "Nível de consciência normal com períodos de agitação",
             "classify": "Sibilância Moderada",
-            "type": "moderate"
+            "type": "moderate",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Administrar beta-2 por via inalatória (até três vezes, a cada 20 minutos)."
+                },
+                {
+                    "id": 2,
+                    "treat": "Administrar corticoide oral."
+                },
+                {
+                    "id": 3,
+                    "treat": "REFERIR, após dar a primeira dose do antibiótico injetável e O2, se possível.",
+                    "result": "bad"
+                },
+                {
+                    "id": 4,
+                    "treat": "Tratamento domiciliar com beta-2 por via inalatória (cinco dias).",
+                    "result": "good"
+                },
+                {
+                    "id": 5,
+                    "treat": "Corticoide por via oral (três dias).",
+                    "result": "good"
+                },
+                {
+                    "id": 6,
+                    "treat": "Dar orientações a mãe para o controle da asma e quando retornar imediatamente.",
+                    "result": "good"
+                },
+                {
+                    "id": 7,
+                    "treat": "Marcar o retorno em dois dias",
+                    "result": "good"
+                }
+            ]
         },
         {
             "id": 8,
             "signal": "Fala entrecortada ou choro entrecortado.",
             "classify": "Sibilância Moderada",
-            "type": "moderate"
+            "type": "moderate",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Administrar beta-2 por via inalatória (até três vezes, a cada 20 minutos)."
+                },
+                {
+                    "id": 2,
+                    "treat": "Administrar corticoide oral."
+                },
+                {
+                    "id": 3,
+                    "treat": "REFERIR, após dar a primeira dose do antibiótico injetável e O2, se possível.",
+                    "result": "bad"
+                },
+                {
+                    "id": 4,
+                    "treat": "Tratamento domiciliar com beta-2 por via inalatória (cinco dias).",
+                    "result": "good"
+                },
+                {
+                    "id": 5,
+                    "treat": "Corticoide por via oral (três dias).",
+                    "result": "good"
+                },
+                {
+                    "id": 6,
+                    "treat": "Dar orientações a mãe para o controle da asma e quando retornar imediatamente.",
+                    "result": "good"
+                },
+                {
+                    "id": 7,
+                    "treat": "Marcar o retorno em dois dias",
+                    "result": "good"
+                }
+            ]
         },
         {
             "id": 9,
             "signal": "Tiragem subcostal.",
             "classify": "Sibilância Moderada",
-            "type": "moderate"
+            "type": "moderate",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Administrar beta-2 por via inalatória (até três vezes, a cada 20 minutos)."
+                },
+                {
+                    "id": 2,
+                    "treat": "Administrar corticoide oral."
+                },
+                {
+                    "id": 3,
+                    "treat": "REFERIR, após dar a primeira dose do antibiótico injetável e O2, se possível.",
+                    "result": "bad"
+                },
+                {
+                    "id": 4,
+                    "treat": "Tratamento domiciliar com beta-2 por via inalatória (cinco dias).",
+                    "result": "good"
+                },
+                {
+                    "id": 5,
+                    "treat": "Corticoide por via oral (três dias).",
+                    "result": "good"
+                },
+                {
+                    "id": 6,
+                    "treat": "Dar orientações a mãe para o controle da asma e quando retornar imediatamente.",
+                    "result": "good"
+                },
+                {
+                    "id": 7,
+                    "treat": "Marcar o retorno em dois dias",
+                    "result": "good"
+                }
+            ]
         },
         {
             "id": 10,
             "signal": "Respiração rápida.",
             "classify": "Sibilância Moderada",
-            "type": "moderate"
+            "type": "moderate",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Administrar beta-2 por via inalatória (até três vezes, a cada 20 minutos)."
+                },
+                {
+                    "id": 2,
+                    "treat": "Administrar corticoide oral."
+                },
+                {
+                    "id": 3,
+                    "treat": "REFERIR, após dar a primeira dose do antibiótico injetável e O2, se possível.",
+                    "result": "bad"
+                },
+                {
+                    "id": 4,
+                    "treat": "Tratamento domiciliar com beta-2 por via inalatória (cinco dias).",
+                    "result": "good"
+                },
+                {
+                    "id": 5,
+                    "treat": "Corticoide por via oral (três dias).",
+                    "result": "good"
+                },
+                {
+                    "id": 6,
+                    "treat": "Dar orientações a mãe para o controle da asma e quando retornar imediatamente.",
+                    "result": "good"
+                },
+                {
+                    "id": 7,
+                    "treat": "Marcar o retorno em dois dias",
+                    "result": "good"
+                }
+            ]
         },
         {
             "id": 11,
             "signal": "Sat. O2 de 91 a 95%* em ar ambiente",
             "classify": "Sibilância Moderada",
-            "type": "moderate"
+            "type": "moderate",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Administrar beta-2 por via inalatória (até três vezes, a cada 20 minutos)."
+                },
+                {
+                    "id": 2,
+                    "treat": "Administrar corticoide oral."
+                },
+                {
+                    "id": 3,
+                    "treat": "REFERIR, após dar a primeira dose do antibiótico injetável e O2, se possível.",
+                    "result": "bad"
+                },
+                {
+                    "id": 4,
+                    "treat": "Tratamento domiciliar com beta-2 por via inalatória (cinco dias).",
+                    "result": "good"
+                },
+                {
+                    "id": 5,
+                    "treat": "Corticoide por via oral (três dias).",
+                    "result": "good"
+                },
+                {
+                    "id": 6,
+                    "treat": "Dar orientações a mãe para o controle da asma e quando retornar imediatamente.",
+                    "result": "good"
+                },
+                {
+                    "id": 7,
+                    "treat": "Marcar o retorno em dois dias",
+                    "result": "good"
+                }
+            ]
         },
         {
             "id": 12,
             "signal": "Não há sinais suficientes para classificar como sibilância grave ou moderada.",
             "classify": "Sibilância Leve",
-            "type": "none"
+            "type": "none",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Tratamento domiciliar com beta-2 agonista por via inalatória (cinco dias)."
+                },
+                {
+                    "id": 2,
+                    "treat": "Se estiver em uso de beta-2 há 24 horas ou mais: prescrever corticoide por via oral (três dias)."
+                },
+                {
+                    "id": 3,
+                    "treat": "Dar orientações à mãe para o controle da asma e quando retornar imediatamente."
+                },
+                {
+                    "id": 4,
+                    "treat": "Seguimento em dois dias, se não melhorar ou se estiver usando corticoide."
+                }
+            ]
         },
         {
             "id": 13,
             "signal": "Sat. O2 ≥ 95%* em ar ambiente",
             "classify": "Sibilância Leve",
-            "type": "none"
+            "type": "none",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Tratamento domiciliar com beta-2 agonista por via inalatória (cinco dias)."
+                },
+                {
+                    "id": 2,
+                    "treat": "Se estiver em uso de beta-2 há 24 horas ou mais: prescrever corticoide por via oral (três dias)."
+                },
+                {
+                    "id": 3,
+                    "treat": "Dar orientações à mãe para o controle da asma e quando retornar imediatamente."
+                },
+                {
+                    "id": 4,
+                    "treat": "Seguimento em dois dias, se não melhorar ou se estiver usando corticoide."
+                }
+            ]
         }
     ],
     "diarreia":
@@ -118,55 +551,277 @@
                     "id": 1,
                     "signal": "Letárgica ou inconsciente.",
                     "classify": "Desidratação grave",
-                    "type": "danger"
+                    "type": "danger",
+                    "treatments": [
+                        {
+                            "id": 1,
+                            "treat": "Iniciar terapia endovenosa (Plano C).",
+                            "result": "good"
+                        },
+                        {
+                            "id": 2,
+                            "treat": "Referir URGENTEMENTE ao hospital, com mãe e o profissional de saúde administrando-lhe goles frequentes de SRO durante o trajeto, se possível.",
+                            "result": "bad"
+                        },
+                        {
+                            "id": 3,
+                            "treat": "Recomendar a continuar a amamentação, se possível.",
+                            "result": "bad"
+                        },
+                        {
+                            "id": 4,
+                            "treat": "Se a criança tiver 2 ou mais anos de idade, e se houver cólera na sua região, administrar antibiótico."
+                        }
+                    ]
                 },
                 {
                     "id": 2,
                     "signal": "Olhos fundos.",
                     "classify": "Desidratação grave",
-                    "type": "danger"
+                    "type": "danger",
+                    "treatments": [
+                        {
+                            "id": 1,
+                            "treat": "Iniciar terapia endovenosa (Plano C).",
+                            "result": "good"
+                        },
+                        {
+                            "id": 2,
+                            "treat": "Referir URGENTEMENTE ao hospital, com mãe e o profissional de saúde administrando-lhe goles frequentes de SRO durante o trajeto, se possível.",
+                            "result": "bad"
+                        },
+                        {
+                            "id": 3,
+                            "treat": "Recomendar a continuar a amamentação, se possível.",
+                            "result": "bad"
+                        },
+                        {
+                            "id": 4,
+                            "treat": "Se a criança tiver 2 ou mais anos de idade, e se houver cólera na sua região, administrar antibiótico."
+                        }
+                    ]
                 },
                 {
                     "id": 3,
                     "signal": "Não consegue beber ou bebe muito mal.",
                     "classify": "Desidratação grave",
-                    "type": "danger"
+                    "type": "danger",
+                    "treatments": [
+                        {
+                            "id": 1,
+                            "treat": "Iniciar terapia endovenosa (Plano C).",
+                            "result": "good"
+                        },
+                        {
+                            "id": 2,
+                            "treat": "Referir URGENTEMENTE ao hospital, com mãe e o profissional de saúde administrando-lhe goles frequentes de SRO durante o trajeto, se possível.",
+                            "result": "bad"
+                        },
+                        {
+                            "id": 3,
+                            "treat": "Recomendar a continuar a amamentação, se possível.",
+                            "result": "bad"
+                        },
+                        {
+                            "id": 4,
+                            "treat": "Se a criança tiver 2 ou mais anos de idade, e se houver cólera na sua região, administrar antibiótico."
+                        }
+                    ]
                 },
                 {
                     "id": 4,
                     "signal": "Sinal da prega: a pele volta muito lentamente ao estado anterior",
                     "classify": "Desidratação grave",
-                    "type": "danger"
+                    "type": "danger",
+                    "treatments": [
+                        {
+                            "id": 1,
+                            "treat": "Iniciar terapia endovenosa (Plano C).",
+                            "result": "good"
+                        },
+                        {
+                            "id": 2,
+                            "treat": "Referir URGENTEMENTE ao hospital, com mãe e o profissional de saúde administrando-lhe goles frequentes de SRO durante o trajeto, se possível.",
+                            "result": "bad"
+                        },
+                        {
+                            "id": 3,
+                            "treat": "Recomendar a continuar a amamentação, se possível.",
+                            "result": "bad"
+                        },
+                        {
+                            "id": 4,
+                            "treat": "Se a criança tiver 2 ou mais anos de idade, e se houver cólera na sua região, administrar antibiótico."
+                        }
+                    ]
                 },
                 {
                     "id": 5,
                     "signal": "Inquieta ou irritada",
                     "classify": "Desidratação",
-                    "type": "moderate"
+                    "type": "moderate",
+                    "treatments": [
+                        {
+                            "id": 1,
+                            "treat": "Administrar SRO na unidade de saúde até hidratar (Plano B)."
+                        },
+                        {
+                            "id": 2,
+                            "treat": "Dar zinco oral por dez dias."
+                        },
+                        {
+                            "id": 3,
+                            "treat": "Informar a mãe sobre quando retornar imediatamente."
+                        },
+                        {
+                            "id": 4,
+                            "treat": "Seguimento em cinco dias, se não melhorar."
+                        },
+                        {
+                            "id": 5,
+                            "treat": "Se a criança também se enquadrar em uma classificação grave devido a outro problema:"
+                        },
+                        {
+                            "id": 6,
+                            "treat": "Referir URGENTEMENTE ao hospital, com a mãe e profissional de saúde administrando-lhe goles frequentes de SRO durante o trajeto."
+                        },
+                        {
+                            "id": 7,
+                            "treat": "Recomendar à mãe que continue a amamentação, se possível."
+                        }
+                    ]
                 },
                 {
                     "id": 6,
                     "signal": "Olhos fundos",
                     "classify": "Desidratação",
-                    "type": "moderate"
+                    "type": "moderate",
+                    "treatments": [
+                        {
+                            "id": 1,
+                            "treat": "Administrar SRO na unidade de saúde até hidratar (Plano B)."
+                        },
+                        {
+                            "id": 2,
+                            "treat": "Dar zinco oral por dez dias."
+                        },
+                        {
+                            "id": 3,
+                            "treat": "Informar a mãe sobre quando retornar imediatamente."
+                        },
+                        {
+                            "id": 4,
+                            "treat": "Seguimento em cinco dias, se não melhorar."
+                        },
+                        {
+                            "id": 5,
+                            "treat": "Se a criança também se enquadrar em uma classificação grave devido a outro problema:"
+                        },
+                        {
+                            "id": 6,
+                            "treat": "Referir URGENTEMENTE ao hospital, com a mãe e profissional de saúde administrando-lhe goles frequentes de SRO durante o trajeto."
+                        },
+                        {
+                            "id": 7,
+                            "treat": "Recomendar à mãe que continue a amamentação, se possível."
+                        }
+                    ]
                 },
                 {
                     "id": 7,
                     "signal": "Bebe avidamente, com sede.",
                     "classify": "Desidratação",
-                    "type": "moderate"
+                    "type": "moderate",
+                    "treatments": [
+                        {
+                            "id": 1,
+                            "treat": "Administrar SRO na unidade de saúde até hidratar (Plano B)."
+                        },
+                        {
+                            "id": 2,
+                            "treat": "Dar zinco oral por dez dias."
+                        },
+                        {
+                            "id": 3,
+                            "treat": "Informar a mãe sobre quando retornar imediatamente."
+                        },
+                        {
+                            "id": 4,
+                            "treat": "Seguimento em cinco dias, se não melhorar."
+                        },
+                        {
+                            "id": 5,
+                            "treat": "Se a criança também se enquadrar em uma classificação grave devido a outro problema:"
+                        },
+                        {
+                            "id": 6,
+                            "treat": "Referir URGENTEMENTE ao hospital, com a mãe e profissional de saúde administrando-lhe goles frequentes de SRO durante o trajeto."
+                        },
+                        {
+                            "id": 7,
+                            "treat": "Recomendar à mãe que continue a amamentação, se possível."
+                        }
+                    ]
                 },
                 {
                     "id": 8,
                     "signal": "Sinal da prega: a pele volta lentamente ao estado anterior.",
                     "classify": "Desidratação",
-                    "type": "moderate"
+                    "type": "moderate",
+                    "treatments": [
+                        {
+                            "id": 1,
+                            "treat": "Administrar SRO na unidade de saúde até hidratar (Plano B)."
+                        },
+                        {
+                            "id": 2,
+                            "treat": "Dar zinco oral por dez dias."
+                        },
+                        {
+                            "id": 3,
+                            "treat": "Informar a mãe sobre quando retornar imediatamente."
+                        },
+                        {
+                            "id": 4,
+                            "treat": "Seguimento em cinco dias, se não melhorar."
+                        },
+                        {
+                            "id": 5,
+                            "treat": "Se a criança também se enquadrar em uma classificação grave devido a outro problema:"
+                        },
+                        {
+                            "id": 6,
+                            "treat": "Referir URGENTEMENTE ao hospital, com a mãe e profissional de saúde administrando-lhe goles frequentes de SRO durante o trajeto."
+                        },
+                        {
+                            "id": 7,
+                            "treat": "Recomendar à mãe que continue a amamentação, se possível."
+                        }
+                    ]
                 },
                 {
                     "id": 9,
                     "signal": "Não há sinais suficientes para classificar como DESIDRATAÇÃO ou DESIDRATAÇÃO GRAVE.",
                     "classify": "Sem desidratação",
-                    "type": "none"
+                    "type": "none",
+                    "treatments": [
+                        {
+                            "id": 1,
+                            "treat": "Dar alimentos e líquidos para tratar a diarreia em casa (Plano A)."
+                        },
+                        {
+                            "id": 2,
+                            "treat": "Dar zinco oral por dez dias."
+                        },
+                        {
+                            "id": 3,
+                            "treat": "Informar a mãe sobre quando retornar imediatamente."
+                        },
+                        {
+                            "id": 4,
+                            "treat": "Seguimento em cinco dias se não melhorar."
+                        }
+                    ]
                 }
             ],
             "14dias": [
@@ -174,13 +829,41 @@
                     "id": 1,
                     "signal": "Com desidratação.",
                     "classify": "Diarreia persistente grave",
-                    "type": "danger"
+                    "type": "danger",
+                    "treatments": [
+                        {
+                            "id": 1,
+                            "treat": "Tratar a desidratação antes de referir a criança, a não ser que esta se enquadre em outra classificação grave."
+                        },
+                        {
+                            "id": 2,
+                            "treat": "Referir URGENTEMENTE ao hospital."
+                        }
+                    ]
                 },
                 {
                     "id": 2,
                     "signal": "Sem desidratação",
                     "classify": "Diarreia persistente",
-                    "type": "moderate"
+                    "type": "moderate",
+                    "treatments": [
+                        {
+                            "id": 1,
+                            "treat": "Informar sobre como alimentar uma criança com DIARREIA PERSISTENTE."
+                        },
+                        {
+                            "id": 2,
+                            "treat": "Dar zinco oral por dez dias dias."
+                        },
+                        {
+                            "id": 3,
+                            "treat": "Informar sobre quando retornar imediatamente."
+                        },
+                        {
+                            "id": 4,
+                            "treat": "Marcar retorno em cinco dias."
+                        }
+                    ]
                 }
             ],
             "sangue": [
@@ -188,7 +871,25 @@
                     "id": 1,
                     "signal": "Sangue nas fezes",
                     "classify": "Disenteria",
-                    "type": "moderate"
+                    "type": "moderate",
+                    "treatments": [
+                        {
+                            "id": 1,
+                            "treat": "Dar um antibiótico recomendado em sua região para Shigella, se houver comprometimento do estado geral."
+                        },
+                        {
+                            "id": 2,
+                            "treat": "Dar zinco oral por dez dias."
+                        },
+                        {
+                            "id": 3,
+                            "treat": "Marcar o retorno em dois dias."
+                        },
+                        {
+                            "id": 4,
+                            "treat": "Informar sobre quando retornar imediatamente."
+                        }
+                    ]
                 }
             ]
         },
@@ -198,37 +899,165 @@
                 "id": 1,
                 "signal": "Qualquer sinal geral de perigo.",
                 "classify": "Malária grave ou doença febril muito grave",
-                "type": "danger"
+                "type": "danger",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Se gota espessa/teste rápido for positivo, dar a primeira dose de um antimalárico recomendado."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Dar a primeira dose de um antibiótico recomendado."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Tratar a criança para evitar hipoglicemia."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Dar antitérmico se temperatura for ≥ 38,0º C."
+                    },
+                    {
+                        "id": 5,
+                        "treat": "Referir URGENTEMENTE ao hospital."
+                    }
+                ]
             },
             {
                 "id": 2,
                 "signal": "Rigidez de nuca.",
                 "classify": "Malária grave ou doença febril muito grave",
-                "type": "danger"
+                "type": "danger",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Se gota espessa/teste rápido for positivo, dar a primeira dose de um antimalárico recomendado."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Dar a primeira dose de um antibiótico recomendado."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Tratar a criança para evitar hipoglicemia."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Dar antitérmico se temperatura for ≥ 38,0º C."
+                    },
+                    {
+                        "id": 5,
+                        "treat": "Referir URGENTEMENTE ao hospital."
+                    }
+                ]
             },
             {
                 "id": 3,
                 "signal": "Petéquias.",
                 "classify": "Malária grave ou doença febril muito grave",
-                "type": "danger"
+                "type": "danger",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Se gota espessa/teste rápido for positivo, dar a primeira dose de um antimalárico recomendado."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Dar a primeira dose de um antibiótico recomendado."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Tratar a criança para evitar hipoglicemia."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Dar antitérmico se temperatura for ≥ 38,0º C."
+                    },
+                    {
+                        "id": 5,
+                        "treat": "Referir URGENTEMENTE ao hospital."
+                    }
+                ]
             },
             {
                 "id": 4,
                 "signal": "Abaulamento de fontanela.",
                 "classify": "Malária grave ou doença febril muito grave",
-                "type": "danger"
+                "type": "danger",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Se gota espessa/teste rápido for positivo, dar a primeira dose de um antimalárico recomendado."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Dar a primeira dose de um antibiótico recomendado."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Tratar a criança para evitar hipoglicemia."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Dar antitérmico se temperatura for ≥ 38,0º C."
+                    },
+                    {
+                        "id": 5,
+                        "treat": "Referir URGENTEMENTE ao hospital."
+                    }
+                ]
             },
             {
                 "id": 5,
                 "signal": "Nenhum sinal de malária grave ou doença febril muito grave e gota espessa ou teste rápido positivo.",
                 "classify": "Malária",
-                "type": "moderate"
+                "type": "moderate",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Tratar com antimalárico oral recomendado."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Dar antitérmico se temperatura for ≥ 38ºC."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Informar a mãe sobre quando retornar imediatamente."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Seguimento em três dias."
+                    },
+                    {
+                        "id": 5,
+                        "treat": "Se tem tido febre todos os dias por mais de cinco dias, realizar investigação."
+                    }
+                ]
             },
             {
                 "id": 6,
                 "signal": "Nenhum dos sinais acima e gota espessa ou teste rápido negativo",
                 "classify": "Doença febril",
-                "type": "none"
+                "type": "none",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Dar antitérmico se temperatura for ≥38,0º."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Informar a mãe/pai/acompanhante sobre quando retornar imediatamente."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Seguimento em dois dias se a febre persistir."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Se tem tido febre todos os dias por mais de cinco dias, realizar investigação."
+                    }
+                ]
             }
         ],
         "sem_malaria": [
@@ -236,31 +1065,121 @@
                 "id": 1,
                 "signal": "Qualquer sinal geral de perigo.",
                 "classify": "Doença febril muito grave",
-                "type": "danger"
+                "type": "danger",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Dar a primeira dose de um antibiótico recomendado."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Tratar a criança para evitar hipoglicemia."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Dar antitérmico se temperatura for ≥ 38,0ºC."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Referir URGENTEMENTE ao hospital."
+                    }
+                ]
             },
             {
                 "id": 2,
                 "signal": "Rigidez de nuca.",
                 "classify": "Doença febril muito grave",
-                "type": "danger"
+                "type": "danger",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Dar a primeira dose de um antibiótico recomendado."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Tratar a criança para evitar hipoglicemia."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Dar antitérmico se temperatura for ≥ 38,0ºC."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Referir URGENTEMENTE ao hospital."
+                    }
+                ]
             },
             {
                 "id": 3,
                 "signal": "Petéquias.",
                 "classify": "Doença febril muito grave",
-                "type": "danger"
+                "type": "danger",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Dar a primeira dose de um antibiótico recomendado."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Tratar a criança para evitar hipoglicemia."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Dar antitérmico se temperatura for ≥ 38,0ºC."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Referir URGENTEMENTE ao hospital."
+                    }
+                ]
             },
             {
                 "id": 4,
                 "signal": "Abaulamento de fontanela.",
                 "classify": "Doença febril muito grave",
-                "type": "danger"
+                "type": "danger",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Dar a primeira dose de um antibiótico recomendado."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Tratar a criança para evitar hipoglicemia."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Dar antitérmico se temperatura for ≥ 38,0ºC."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Referir URGENTEMENTE ao hospital."
+                    }
+                ]
             },
             {
                 "id": 5,
                 "signal": "Nenhum sinal de doença febril muito grave.",
                 "classify": "Doença febril",
-                "type": "none"
+                "type": "none",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Dar antitérmico se temperatura for ≥ 38,0ºC."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Informar a mãe/pai/acompanhante sobre quando retornar imediatamente."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Seguimento em dois dias se a febre persistir."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Se tem tido febre todos os dias por mais de cinco dias, referir para investigação."
+                    }
+                ]
             }
         ]
     },
@@ -269,31 +1188,101 @@
             "id": 1,
             "signal": "Tumefação e/ou vermelhidão dolorosa ao toque atrás da orelha.",
             "classify": "Mastoidite",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Dar a primeira dose de um antibiótico recomendado."
+                },
+                {
+                    "id": 2,
+                    "treat": "Dar analgésico em caso de dor."
+                },
+                {
+                    "id": 3,
+                    "treat": "Referir URGENTEMENTE ao hospital."
+                }
+            ]
         },
         {
             "id": 2,
             "signal": "Secreção purulenta visível no ouvido há menos de 14 dias ou otoscopia alterada.",
             "classify": "Infecção aguda do ouvido",
-            "type": "moderate"
+            "type": "moderate",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Antibiótico recomendado por oito dias."
+                },
+                {
+                    "id": 2,
+                    "treat": "Dar analgésico em caso de dor."
+                },
+                {
+                    "id": 3,
+                    "treat": "Secar o ouvido com uma mecha se houver secreção."
+                },
+                {
+                    "id": 4,
+                    "treat": "Marcar o retorno com dois dias."
+                },
+                {
+                    "id": 5,
+                    "treat": "Orientar sinais de retorno imediato."
+                }
+            ]
         },
         {
             "id": 3,
             "signal": "Dor no ouvido",
             "classify": "Possível infecção aguda do ouvido",
-            "type": "moderate"
+            "type": "moderate",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Dar analgésico em caso de dor."
+                },
+                {
+                    "id": 2,
+                    "treat": "Marcar o retorno com dois dias."
+                },
+                {
+                    "id": 3,
+                    "treat": "Orientar sinais de retorno imediato"
+                }
+            ]
         },
         {
             "id": 4,
             "signal": "Secreção purulenta visível no ouvido há 14 dias ou mais",
             "classify": "Infecção crônica do ouvido",
-            "type": "moderate"
+            "type": "moderate",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Secar o ouvido com uma mecha"
+                },
+                {
+                    "id": 2,
+                    "treat": "Marcar o retorno com cinco dias."
+                },
+                {
+                    "id": 3,
+                    "treat": "Orientar sinais de retorno imediato."
+                }
+            ]
         },
         {
             "id": 5,
             "signal": "Não tem dor de ouvido e não foi notada alguma secreção purulenta no ouvido.",
             "classify": "Não há infecção do ouvido",
-            "type": "none"
+            "type": "none",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Nenhum tratamento adicional."
+                }
+            ]
         }
     ],
     "dor_de_garganta": [
@@ -301,43 +1290,129 @@
             "id": 1,
             "signal": "Qualquer sinal geral de perigo.",
             "classify": "Infecção grave de garganta",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Dar a primeira dose de um antibiótico recomendado."
+                },
+                {
+                    "id": 2,
+                    "treat": "Referir urgentemente ao hospital."
+                }
+            ]
         },
         {
             "id": 2,
             "signal": "Abaulamento de palato.",
             "classify": "Infecção grave de garganta",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Dar a primeira dose de um antibiótico recomendado."
+                },
+                {
+                    "id": 2,
+                    "treat": "Referir urgentemente ao hospital."
+                }
+            ]
         },
         {
             "id": 3,
             "signal": "Amígdalas com a presença de membranas branco-acinzentadas.",
             "classify": "Infecção grave de garganta",
-            "type": "danger"
+            "type": "danger",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Dar a primeira dose de um antibiótico recomendado."
+                },
+                {
+                    "id": 2,
+                    "treat": "Referir urgentemente ao hospital."
+                }
+            ]
         },
         {
             "id": 4,
             "signal": "Gânglios aumentados e dolorosos no pescoço.",
             "classify": "Infecção moderada de garganta",
-            "type": "moderate"
+            "type": "moderate",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Dar um antibiótico recomendado"
+                },
+                {
+                    "id": 2,
+                    "treat": "Dar analgésico em caso de dor."
+                },
+                {
+                    "id": 3,
+                    "treat": "Marcar consulta de retorno com dois dias."
+                },
+                {
+                    "id": 4,
+                    "treat": "Informar a mãe sobre quando retornar imediatamente."
+                }
+            ]
         },
         {
             "id": 5,
             "signal": "Amígdalas hiperemiadas com pontos purulentos ou petéquias em palato.",
             "classify": "Infecção moderada de garganta",
-            "type": "moderate"
+            "type": "moderate",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Dar um antibiótico recomendado"
+                },
+                {
+                    "id": 2,
+                    "treat": "Dar analgésico em caso de dor."
+                },
+                {
+                    "id": 3,
+                    "treat": "Marcar consulta de retorno com dois dias."
+                },
+                {
+                    "id": 4,
+                    "treat": "Informar a mãe sobre quando retornar imediatamente."
+                }
+            ]
         },
         {
             "id": 6,
             "signal": "Vesículas e ou hiperemia de garganta, associados a sinais de resfriado comum",
             "classify": "Infecção leve de garganta",
-            "type": "none"
+            "type": "none",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Dar analgésico em caso dor."
+                },
+                {
+                    "id": 2,
+                    "treat": "Seguimento em dois dias se persistir dor de garganta."
+                },
+                {
+                    "id": 3,
+                    "treat": "Informar a mãe/pai/acompanhante sobre quando retornar imediatamente."
+                }
+            ]
         },
         {
             "id": 7,
             "signal": "Não há nenhum dos sinais acima descritos.",
             "classify": "Não há infecção de garganta",
-            "type": "none"
+            "type": "none",
+            "treatments": [
+                {
+                    "id": 1,
+                    "treat": "Nenhum tratamento adicional."
+                }
+            ]
         }
     ],
     "desnutricao": {
@@ -346,43 +1421,189 @@
                 "id": 1,
                 "signal": "Emagrecimanto acentuado visível",
                 "classify": "Desnutrição grave",
-                "type": "danger"
+                "type": "danger",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Prevenir, controlar e, se necessário, tratar a hipoglicemia."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Prevenir a hipotermia (manter a criança agasalhada)."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Dar megadose de vitamina A, se a criança não tiver tomado nos últimos 30 dias."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Referir URGENTEMENTE ao hospital."
+                    }
+                ]
             },
             {
                 "id": 2,
                 "signal": "Edema em ambos os pés.",
                 "classify": "Desnutrição grave",
-                "type": "danger"
+                "type": "danger",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Prevenir, controlar e, se necessário, tratar a hipoglicemia."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Prevenir a hipotermia (manter a criança agasalhada)."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Dar megadose de vitamina A, se a criança não tiver tomado nos últimos 30 dias."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Referir URGENTEMENTE ao hospital."
+                    }
+                ]
             },
             {
                 "id": 3,
                 "signal": "Peso para a idade < -3 escores z.",
                 "classify": "Peso muito baixo",
-                "type": "moderate"
+                "type": "moderate",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Avaliar a alimentação da criança e as possíveis causas de desnutrição."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Aconselhar a mãe/pai/acompanhante a tratar a criança de acordo com as dietas especiais."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Dar megadose de vitamina A, se a criança não tiver tomado nos últimos 30 dias."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Uso profilático de ferro em menores de 24 meses."
+                    },
+                    {
+                        "id": 5,
+                        "treat": "Retorno com cinco dias."
+                    },
+                    {
+                        "id": 6,
+                        "treat": "Orientar sinais de retorno imediato."
+                    }
+                ]
             },
             {
                 "id": 4,
                 "signal": "Peso para a idade < -2 e ≥ -3 escores z.",
                 "classify": "Peso baixo ou ganho de peso insuficiente",
-                "type": "moderate"
+                "type": "moderate",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Avaliar a alimentação da criança e as possíveis causas do peso baixo."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Orientar a alimentação adequada."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Uso profilático de ferro em menores de 24 meses."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Marcar retorno com duas semanas."
+                    },
+                    {
+                        "id": 5,
+                        "treat": "Orientar sinais de retorno imediato."
+                    }
+                ]
             },
             {
                 "id": 5,
                 "signal": "Tendência da curva peso/idade horizontal ou descendente",
                 "classify": "Peso baixo ou ganho de peso insuficiente",
-                "type": "moderate"
+                "type": "moderate",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Avaliar a alimentação da criança e as possíveis causas do peso baixo."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Orientar a alimentação adequada."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Uso profilático de ferro em menores de 24 meses."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Marcar retorno com duas semanas."
+                    },
+                    {
+                        "id": 5,
+                        "treat": "Orientar sinais de retorno imediato."
+                    }
+                ]
             },
             {
                 "id": 6,
                 "signal": "Peso para a idade > +2 escores z.",
                 "classify": "Peso elevado",
-                "type": "moderate"
+                "type": "moderate",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Avaliar a alimentação da criança e as possíveis causas do peso elevado."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Orientar a alimentação adequada."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Verificar e estimular a prática de atividade física."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Uso profilático de ferro em menores de 24 meses."
+                    },
+                    {
+                        "id": 5,
+                        "treat": "Marcar o retorno com duas semanas."
+                    },
+                    {
+                        "id": 6,
+                        "treat": "Orientar sinais de retorno realizando o diagnóstico do estado nutricional."
+                    }
+                ]
             },
             {
                 "id": 7,
                 "signal": "Peso para a idade ≤ +2 e ≥ -2 escore z.",
                 "classify": "Peso adequado",
-                "type": "none"
+                "type": "none",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Elogiar a mãe/pai/acompanhante pelo crescimento de seu filho."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Reforçar as recomendações para alimentação saudável, de acordo com o Quadro de Recomendações a respeito da alimentação da criança."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Uso profilático de ferro em menores de 24 meses."
+                    }
+                ]
             }
         ],
         "palidez_palmar": [
@@ -390,13 +1611,41 @@
                 "id": 1,
                 "signal": "Palidez palmar grave ou Hb abaixo de 5 g/dL.",
                 "classify": "Anemia grave",
-                "type": "danger"
+                "type": "danger",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Referir URGENTEMENTE ao hospital."
+                    }
+                ]
             },
             {
                 "id": 2,
                 "signal": "• Palidez palmar leve ou Hb de 5 g/dL a 10,9 g/dL.",
                 "classify": "Anemia",
-                "type": "moderate"
+                "type": "moderate",
+                "treatments": [
+                    {
+                        "id": 1,
+                        "treat": "Realizar tratamento com ferro."
+                    },
+                    {
+                        "id": 2,
+                        "treat": "Realizar teste de malária em área de risco."
+                    },
+                    {
+                        "id": 3,
+                        "treat": "Dar anti-helmíntico se a criança tiver um ano ou mais e não tiver tomado nenhuma dose nos últimos 6 meses."
+                    },
+                    {
+                        "id": 4,
+                        "treat": "Avaliar a alimentação da criança e orientar a mãe/pai/acompanhante sobre alimentos ricos em ferro."
+                    },
+                    {
+                        "id": 5,
+                        "treat": "Marcar retorno com 14 dias."
+                    }
+                ]
             }
         ]
     }

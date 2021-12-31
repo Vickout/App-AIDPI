@@ -18,7 +18,9 @@ const Garganta: React.FC = () => {
           numColumns={1}
           ListFooterComponent={() => (
             <Button
-              onPress={() => navigation.navigate('Classification' as never)}>
+              onPress={() =>
+                navigation.navigate('ClassificationDisease' as never)
+              }>
               Classificar
             </Button>
           )}

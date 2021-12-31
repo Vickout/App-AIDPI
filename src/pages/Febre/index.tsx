@@ -42,7 +42,8 @@ const Febre: React.FC = () => {
           </Checkbox>
         ))}
       </View>
-      <Button onPress={() => navigation.navigate('Classification' as never)}>
+      <Button
+        onPress={() => navigation.navigate('ClassificationDisease' as never)}>
         Classificar
       </Button>
     </View>
