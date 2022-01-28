@@ -38,7 +38,6 @@ const ClassificationDisease: React.FC = () => {
   );
   const [clicked, setClicked] = useState(false);
 
-  console.log('::::::::::::::', classify);
   useEffect(() => {
     const classifyValue: Array<IClassification> = [];
     yesDisease.forEach(data =>
@@ -238,7 +237,7 @@ const ClassificationDisease: React.FC = () => {
         <Button
           style={{elevation: 4}}
           onPress={() => {
-            setClassify({} as IClassification);
+            setClicked(false);
             resetClassification();
             nextScreen();
           }}>

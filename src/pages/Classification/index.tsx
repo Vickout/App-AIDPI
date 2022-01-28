@@ -19,7 +19,6 @@ const Classification: React.FC = () => {
   );
   const [text, setText] = useState('');
 
-  console.log('::::::::::::::', classify);
   useEffect(() => {
     const classifyValue: Array<IClassification> = [];
     yesDisease.forEach(data =>
