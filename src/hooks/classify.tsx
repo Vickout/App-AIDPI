@@ -1,4 +1,4 @@
-import React, {createContext, useCallback, useContext, useState} from 'react';
+import React, { createContext, useCallback, useContext, useState } from 'react';
 
 interface DiseaseProps {
   id: number;
@@ -22,7 +22,7 @@ const ClassifyContext = createContext<ClassifyContextData>(
   {} as ClassifyContextData,
 );
 
-export const ClassifyProvider: React.FC = ({children}) => {
+export const ClassifyProvider: React.FC = ({ children }) => {
   const [yesDisease, setYesDisease] = useState<DiseaseProps[]>([]);
 
   const addDisease = useCallback(
@@ -48,7 +48,8 @@ export const ClassifyProvider: React.FC = ({children}) => {
 
   return (
     <ClassifyContext.Provider
-      value={{addDisease, resetClassification, yesDisease}}>
+      value={{ addDisease, resetClassification, yesDisease }}
+    >
       {children}
     </ClassifyContext.Provider>
   );

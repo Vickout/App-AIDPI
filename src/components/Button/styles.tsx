@@ -1,5 +1,5 @@
-import styled, {css} from 'styled-components/native';
-import {lighten} from 'polished';
+import styled, { css } from 'styled-components/native';
+import { lighten } from 'polished';
 
 export const Container = styled.TouchableOpacity`
   margin-top: 20px;

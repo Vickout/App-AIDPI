@@ -1,6 +1,6 @@
-import React, {Fragment, useEffect, useState} from 'react';
-import {useNavigation} from '@react-navigation/native';
-import {useClassify} from '../../hooks/classify';
+import React, { Fragment, useEffect, useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
+import { useClassify } from '../../hooks/classify';
 import Icon from 'react-native-vector-icons/Feather';
 
 import {
@@ -17,7 +17,7 @@ import {
   Dot,
   TreatmentList,
 } from './styles';
-import {View} from 'react-native';
+import { View } from 'react-native';
 
 interface IClassification {
   classify: string;
@@ -31,7 +31,7 @@ interface IClassification {
 
 const ClassificationDisease: React.FC = () => {
   const navigation = useNavigation();
-  const {yesDisease, resetClassification} = useClassify();
+  const { yesDisease, resetClassification } = useClassify();
 
   const [classify, setClassify] = useState<IClassification>(
     {} as IClassification,
@@ -98,7 +98,7 @@ const ClassificationDisease: React.FC = () => {
   };
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{ flex: 1 }}>
       <Container
         contentContainerStyle={{
           alignItems: 'center',
@@ -107,7 +107,8 @@ const ClassificationDisease: React.FC = () => {
           paddingBottom: 140,
           paddingHorizontal: 20,
         }}
-        typeOfClassification={classify.type}>
+        typeOfClassification={classify.type}
+      >
         <TitleContainer>
           {classify.type === 'danger' ? (
             <Icon name="x-circle" size={40} color="#fff" />
@@ -122,7 +123,8 @@ const ClassificationDisease: React.FC = () => {
         </TitleContainer>
         <TreatmentContainer
           activeOpacity={1}
-          onPress={() => setClicked(!clicked)}>
+          onPress={() => setClicked(!clicked)}
+        >
           <TreatmentHeader>
             <TreatmentTitle>Tratamento</TreatmentTitle>
             {clicked ? (
@@ -235,12 +237,13 @@ const ClassificationDisease: React.FC = () => {
           )}
         </TreatmentContainer>
         <Button
-          style={{elevation: 4}}
+          style={{ elevation: 4 }}
           onPress={() => {
             setClicked(false);
             resetClassification();
             nextScreen();
-          }}>
+          }}
+        >
           <ButtonTitle>Prosseguir</ButtonTitle>
         </Button>
       </Container>
